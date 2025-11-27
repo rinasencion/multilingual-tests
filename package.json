@@ -1,0 +1,31 @@
+{
+  "name": "multilingual-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "http-server public -p 3000",
+    "clean-screenshots": "node -e \"require('fs').rmSync('screenshots', { recursive: true, force: true });\"",
+    "test": "npm run clean-screenshots && playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rinasencion/multilingual-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rinasencion/multilingual-tests/issues"
+  },
+  "homepage": "https://github.com/rinasencion/multilingual-tests#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1",
+    "http-server": "^14.1.1"
+  }
+}
